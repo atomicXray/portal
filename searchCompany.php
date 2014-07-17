@@ -42,6 +42,7 @@ $sql->connect();
 // testing
 
 // complex checking, too much going on here:
+// check this 
 if (isset($_POST['searchBox'])){
 	// search box had value entered
 	$searchKeyword = $_POST['searchBox'];
