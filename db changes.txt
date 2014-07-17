@@ -1,0 +1,21 @@
+-- version 1.2
+------------------
+
+CREATE TABLE IF NOT EXISTS `sqlLogin` (
+  `sqlLoginId` int(11) NOT NULL AUTO_INCREMENT,
+  `companyId` int(11) NOT NULL,
+  `sqlLoginUsername` varchar(50) COLLATE latin1_general_ci NOT NULL,
+  `sqlLoginPassword` varchar(50) COLLATE latin1_general_ci NOT NULL,
+  PRIMARY KEY (`sqlLoginId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci ;
+
+
+-- version 1.3
+------------------
+ALTER TABLE `server` ADD `rdgServerName` VARCHAR( 50 ) NOT NULL 
+
+
+--version 1.4
+------------------
+
+RENAME TABLE  `portal`.`members` TO  `portal`.`user` ;
