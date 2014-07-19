@@ -111,6 +111,8 @@ $div->divData = "";
 $div->divClass = "resultBox1";
 $searchPage->addToBody($div->getHtmlDiv());
 
+$serverInfo = $company->getSearchServerList($companyList[0]);
+print_r($serverInfo);
 // Result box
 if(isset($companyList)){
 	// got results
@@ -118,9 +120,10 @@ if(isset($companyList)){
 	$div->divClass = "resultBox5";
 	$tempHtml = $div->getHtmlDiv();
 
-	$div->divData = "<strong>Ext IP:</strong> 192.138.168.153<br />
-	user: user<br />
-	pass: pass";
+	$div->divData = $serverInfo[0]['externalServerName'];
+	// $div->divData = "<strong>Ext IP:</strong> 192.138.168.153<br />
+	// user: user<br />
+	// pass: pass";
 	$div->divClass = "resultBox4";
 	$tempHtml .= $div->getHtmlDiv();
 
